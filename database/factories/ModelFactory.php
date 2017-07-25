@@ -28,3 +28,10 @@ $factory->define(App\Classroom::class, function (Faker\Generator $faker) {
         'description' => $faker->sentence,
     ];
 });
+$factory->define(App\Subject::class, function (Faker\Generator $faker) {
+    return [
+        'name_subject' => $faker->name,
+        'hours' => $faker->randomNumber(2),
+        'max_students' => $faker->randomNumber(2),
+    ];
+});

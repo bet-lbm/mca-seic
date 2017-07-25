@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">CURSO</div>
 
                 <div class="panel-body">
                     <p>
@@ -31,9 +31,10 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{$classrooms->render()}}
+                    
                 </div>
             </div>
+            {{$classrooms->render()}}
         </div>
     </div>
 </div>
