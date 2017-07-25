@@ -24,10 +24,9 @@ class CreateSubjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
-            'name_subject' => 'required',
+            'name_subject'=>'required|unique:subjects',
             'hours'=>'required | integer',
-            'max_students'=> 'required|integer'
+            'max_students'=>'required | integer'
         ];
     }
 }

@@ -29,7 +29,7 @@ Route::name('update_subject_path')->put('/subjects/{subject}','SubjectController
 Route::name('delete_subject_path')->delete('/subjects/{subject}','SubjectController@delete');
 
 Route::name('subjects_path')->get('/subjects','SubjectController@index');
-Route::name('subject_path')->get('subjects/{subject}','SubjectController@show');
+Route::name('subject_path')->get('/subjects/{subject}','SubjectController@show');
 
 
 

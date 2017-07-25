@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Subject;
 use App\Http\Requests\CreateSubjectRequest;
 use App\Http\Requests\UpdateSubjectRequest;
+use App\Subject;
 use Illuminate\Http\Request;
 
 class SubjectController extends Controller
@@ -15,7 +15,7 @@ class SubjectController extends Controller
 
     public function show(Subject $subject){
 
-    	return view('subjects.index')->with(['subject'=>$subject]);
+    	return view('subjects.show')->with(['subject'=>$subject]);
     }
 
     public function create(){
@@ -24,12 +24,12 @@ class SubjectController extends Controller
     	return view('subjects.create')->with(['subject'=>$subject]);
     }
     public function store(CreateSubjectRequest $request){
-    	$subject = new Subject;
-    	$subject =fill(
-    		$request->only('name_subject','hours','max_students')
-    	);
+        $subject =Subject::create(
+            $request->only('name_subject','hours','max_students')
+        );
     	$subject->save();
-    	return redirect()->route('subject_path',['subject'=>$subject->id]);
+        session()->flash('message','Curso creado!');
+    	return redirect()->route('subject_path', ['subject'=>$subject->id]);
     }
 
     public function edit(Subject $subject){
@@ -39,12 +39,14 @@ class SubjectController extends Controller
     	$subject ->update(
     		$request->only('name_subject','hours','max_students')
     	);
+        session()->flash('message','Curso actualizado!');
     	return redirect()->route('subject_path',['subject'=>$subject->id]);
     }
 
     public function delete(Subject $subject){
     	$subject->delete();
-    	return redirect()->route('subject_path');
+        session()->flash('message','Classroom Deleted!');
+    	return redirect()->route('subjects_path');
     }
 
 
