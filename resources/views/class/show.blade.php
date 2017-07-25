@@ -1,11 +1,14 @@
-@extends('layouts.app')
-@section('content')
-<div class="container">
-	
-</div> <div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<h2>{{ $classroom->num_class }}</h2>
-		<p>{{ $classroom->description }}</p>
-	</div>
+@extends('layouts.container')
+@section('head')
+Detalle de aula
+@endsection
+@section('body')
+	<h4>Número de aula: {{ $classroom->num_class }}</h4>
+	<p>Descripción {{ $classroom->description }}</p>
+
+@endsection
+@section('extra')
+<div class="panel-footer">
+	<a href="{{ route('classrooms_path') }}">Regresar</a>
 </div>
 @endsection
