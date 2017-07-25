@@ -8,6 +8,8 @@
                   @yield('head')
                 </div>
               	<div class="panel-body"> 
+                  @include ('layouts._errors')
+                  @include ('layouts._messages')
                   @yield('body')
               	</div>
              </div>

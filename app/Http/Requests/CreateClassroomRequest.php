@@ -24,7 +24,8 @@ class CreateClassroomRequest extends FormRequest
     public function rules()
     {
         return [
-            'num_class' => 'required|integer'
+            'num_class' => 'required|integer|unique:classrooms',
+            'description' => 'required'
         ];
     }
 }

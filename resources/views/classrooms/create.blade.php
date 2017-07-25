@@ -3,5 +3,5 @@
 Crear nueva aula
 @endsection
 @section('body')
-    @include('class._form',['classroom' => $classroom])
+    @include('classrooms._form',['classroom' => $classroom])
 @endsection

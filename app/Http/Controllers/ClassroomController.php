@@ -32,6 +32,7 @@ class ClassroomController extends Controller
         );
     	$classroom->save();
 
+        session()->flash('message','Classroom Created!');
     	return redirect()->route('classrooms_path');
     }
     public function edit(Classroom $classroom)
@@ -43,11 +44,13 @@ class ClassroomController extends Controller
         $classroom->update(
             $request->only('num_class','description')
         );
+        session()->flash('message','Classroom Updated!');
         return redirect()->route('classroom_path',['classroom'=>$classroom->id]);
     }
     public function delete(Classroom $classroom)
     {
         $classroom->delete();
+        session()->flash('message','Classroom Deleted!');
         return redirect()->route('classrooms_path');
     }
 }
