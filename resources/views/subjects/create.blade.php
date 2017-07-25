@@ -1,6 +1,6 @@
 @extends('layouts.container')
 @section('head')
-Crear nuevo curso
+Crear Nuevo Curso
 @endsection
 @section('body')
     @include('subjects._form',['subject' => $subject])

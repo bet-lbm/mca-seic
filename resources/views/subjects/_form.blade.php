@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-group">
-        <label for="hours" class="col-md-4 control-label">hora de duracion</label>
+        <label for="hours" class="col-md-4 control-label">Horas</label>
 
         <div class="col-md-6">
             <input type="number" class="form-control" name="hours" value="{{ $subject->hours or old('hours') }}" required>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="form-group">
-        <label for="max_students" class="col-md-4 control-label">numero max de estudiantes</label>
+        <label for="max_students" class="col-md-4 control-label">Max de Estudiantes</label>
 
         <div class="col-md-6">
             <input type="number" class="form-control" name="max_students" value="{{ $subject->max_students or old('students') }}" required>

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Lista de Curso</div>
+                <div class="panel-heading">Lista de Cursos</div>
                 
                 <div class="panel-body">
                     @include('layouts._messages')
@@ -14,9 +14,9 @@
                         <thead>
                             <tr>
                                 <th width="20px">ID</th>
-                                <th class="text-center">Nombre Curso</th>
+                                <th class="text-center">Nombre Cursos</th>
                                 <th whidth="30px">Horas</th>
-                                <th whidth="20px">maximo</th>
+                                <th whidth="20px">Maximo</th>
                                 <th whidth="40px"></th>
                                 <th>&nbsp;</th>
                             </tr>
