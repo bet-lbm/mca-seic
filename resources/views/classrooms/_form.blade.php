@@ -1,5 +1,5 @@
 @if($classroom->exists)
-	<form action="{{ route('update_classroom_path',['classroom'=>$classroom->id]) }}" method="POST">
+	<form class="form-horizontal" action="{{ route('update_classroom_path',['classroom'=>$classroom->id]) }}" method="POST">
 	{{ method_field('PUT') }}
 @else
 	<form class="form-horizontal" method="POST" action="{{ route('store_classroom_path') }}">
