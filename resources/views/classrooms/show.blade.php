@@ -9,6 +9,6 @@ Detalle de aula
 @endsection
 @section('extra')
 <div class="panel-footer">
-	<a href="{{ route('classrooms_path') }}">Regresar</a>
+	<a class="btn btn-link" href="{{ route('classrooms_path') }}">Regresar</a>
 </div>
 @endsection

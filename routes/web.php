@@ -7,7 +7,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+// Classroom
 Route::name('create_classroom_path')->get('/classrooms/create','ClassroomController@create');
 Route::name('store_classroom_path')->post('/classrooms','ClassroomController@store');
 Route::name('edit_classroom_path')->get('/classrooms/{classroom}/edit','ClassroomController@edit');

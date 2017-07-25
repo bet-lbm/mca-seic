@@ -13,16 +13,16 @@ class ClassroomController extends Controller
     public function index()
     {
     	$classrooms = Classroom::paginate(10);
-    	return view('class.index')->with(['classrooms'=>$classrooms]);
+    	return view('classrooms.index')->with(['classrooms'=>$classrooms]);
     }
     public function show(Classroom $classroom)
     {
-        return view('class.show')->with(['classroom'=>$classroom]);
+        return view('classrooms.show')->with(['classroom'=>$classroom]);
     }
     public function create()
     {
     	$classroom = new Classroom;
-    	return view('class.create')->with(['classroom'=>$classroom]);
+    	return view('classrooms.create')->with(['classroom'=>$classroom]);
     }
     public function store(CreateClassroomRequest $request)
     {
@@ -36,7 +36,7 @@ class ClassroomController extends Controller
     }
     public function edit(Classroom $classroom)
     {
-        return view('class.edit')->with(['classroom'=>$classroom]);
+        return view('classrooms.edit')->with(['classroom'=>$classroom]);
     } 
     public function update(Classroom $classroom, UpdateClassroomRequest $request)
     {

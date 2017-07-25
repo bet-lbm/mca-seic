@@ -22,13 +22,13 @@ Lista de aulas
             <td width="20px">{{ $classroom->id }}</td>
             <td class="text-center">{{ $classroom->num_class }}</td>
             <td>{{ $classroom->description }}</td>
-            <td width="20px"><a href="{{ route('edit_classroom_path', ['classroom'=>$classroom->id]) }}">Editar</a></td>
+            <td width="20px"><a class="btn btn-primary" href="{{ route('edit_classroom_path', ['classroom'=>$classroom->id]) }}">Editar</a></td>
             <td width="20px">
-                <a href="{{ route('delete_classroom_path', ['classroom'=>$classroom->id]) }}" method="POST">
-                {{ csrf_field() }}
-                {{ method_field('DELETE') }}
-                Eliminar
-                </a>
+                <form action="{{ route('delete_classroom_path', ['classroom'=>$classroom->id]) }}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
             </td>
         </tr>
         @endforeach
