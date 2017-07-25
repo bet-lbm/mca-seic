@@ -19,8 +19,18 @@ Route::name('classroom_path')->get('/classrooms/{classroom}', 'ClassroomControll
 
 
 //curso 
+
+Route::name('create_subject_path')->get('/subjects/create','SubjectController@create');
+Route::name('store_subject_path')->post('/subjects','SubjectController@store');
+
+Route::name('edit_subject_path')->get('/subjects/{subject}/edit','SubjectController@edit');
+Route::name('update_subject_path')->put('/subjects/{subject}','SubjectController@update');
+
+Route::name('delete_subject_path')->delete('/subjects/{subject}','SubjectController@delete');
+
 Route::name('subjects_path')->get('/subjects','SubjectController@index');
-Route::name('create_subject_path')->get('/subjects/create','SubjectControll@create');
+Route::name('subject_path')->get('subjects/{subject}','SubjectController@show');
+
 
 
 
