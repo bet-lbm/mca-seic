@@ -35,4 +35,6 @@ Lista de aulas
     </tbody>
 </table>
 @endsection
+@section('extra')
 {{$classrooms->render()}}
+@endsection

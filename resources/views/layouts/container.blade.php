@@ -10,8 +10,8 @@
               	<div class="panel-body"> 
                   @yield('body')
               	</div>
-                @yield('extra')
              </div>
+             @yield('extra')
         </div>
     </div>
 </div>
